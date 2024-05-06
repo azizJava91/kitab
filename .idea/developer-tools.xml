@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DeveloperToolsToolWindowSettingsV1" lastSelectedContentNodeId="hashing-transformer">
+    <developerToolsConfigurations>
+      <developerToolConfiguration developerToolId="hashing-transformer" id="f14a9f55-d277-468f-978f-0a311b82d611" name="Workbench">
+        <properties>
+          <property key="sourceText" type="INPUT" value="kotlin.String|azizdggf" />
+        </properties>
+      </developerToolConfiguration>
+      <developerToolConfiguration developerToolId="code-style-formatting" id="433c060e-dc7e-4504-932c-b92f3730e370" name="Workbench">
+        <properties>
+          <property key="sourceText" type="INPUT" value="kotlin.String|chjbjhbhd" />
+          <property key="languageId" type="CONFIGURATION" value="kotlin.String|JAVA" />
+        </properties>
+      </developerToolConfiguration>
+    </developerToolsConfigurations>
+    <expandedGroupNodeIds />
+  </component>
+</project>
