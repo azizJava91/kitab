@@ -12,7 +12,7 @@ public class a_01_javaya_giris {
 //            "JDK nin icinde java libs, compiler interpreter, JVM ve JRE    var" +
 //            "yeni ki bir defe yaz her yerde islet mentiqinin sebebkari JVM dir. her os e uygun jvm var" +
 //            "JVM sadece java dilinde yazilmis codlari deyil byte coda cevrile bilen her dili isledir" +
-//            "java da yaddas temizleyici GARBAGE COLLECTOR (GC) var" +
+//            "java da yad  das temizleyici GARBAGE COLLECTOR (GC) var" +
 //            "MULTITHREADING ozelliyi var" +
 //            "Java===> Spring framework, Hibernate, Struts JSF (JavaServer Faces) kimi framework ler var" +
 //
