@@ -134,52 +134,12 @@ public class spring_giris {
 //    child.getMesaj1,  child.getMesaj2   child.getMesaj3
 //    output:  sub class salam, super salam2, sub class salam3
 //
-//    Maven bize proyektde lazim olan ve springin ozunde olmayan kitabxanalari jar formasinda uzaq ve ya local serverlerden axtarib almaq, proyekte elave etmek, build etmek,
-//    clean ile silib install ile yeniden yaratmaq, ve lazim gelerse hazir proyektimizi jar halina getirib basqa adamlara ve uzaq servere gondermeyimize komek edir
-//
-//    pom.xml file i maven ucun lazim olan kitabxanalarin artifact, grup id, version kimi melumatlarini tanitmagimiz ucun lazim olan lovhedir.
 //
 //    Spring de annotationlar ile xml file larinda olan qurulumlarin daha asan yolla evez olunmasini temin edir, annotationlar class , obyect, method, deyisen bir sozle
 //    class ve classa aid her seyin uzerinde istifade oluna biler. java 5 ile gelib. istifade etmek ucun java 5 ve ustu versiyalar lazimdir.
 //    Annotation xml den daha pratikdir amma kod deyisikliyi zamani xml daha elverislidir cunki xml kodu deyismez saxlayir
 //
 //    IDEMPOTENCY bir methodun her cagrildinda eyni deyer vermesidir, her defe ferqli deyer qaytaran NON-IDEMPOTENCY methoddur
-//
-//    Springin modullarindan biri olan AOP Aspect oriented programming proyektimizde cox tekrar olunan emeliyatlari mes: loglama, transaction, security, monitoring  bir merkeze toplayib
-//    programdan asili olmadan istifade etmeyimize ve modulyarliq qazandirmagimiza  imkan yaradir. temir asanlasir ve tekrar kodlar en aza endirilir
-//
-//    AOP nin esas elementleri Aspect , Join point, Advice, Pointcut, Weaving, Cross-Cutting Concern, AspectJ, Proxy kimi elementlerdir.
-//
-//    spring boot da aop nin esasinda isleyen ASPECTJ kitabxanasi var
-//
-//    Join Point after before kimi yeni bir methoda girmeden evvel, methodun isini gordukden sonraki an, ve ya exception dan evvelki ve ya sonraki an ve ya return olunandan
-//    sonraki andir, buralara giris edib emeliyat heyata kecirmeye ise Cross-Cutting Concern, yeni capraz girisme narahatligi, ehtiyatli olma durumu deyilir
-//    bunlari advice deyisenleri ile edirik
-//
-//    advice:  @Before("execution(* com.project.MyController.EmployeeController(..))")
-//                 @After("execution(* com.project.MyController.EmployeeController(..))")
-//
-//    @Pointcut  ile teyin olunan method tekrar adress deyisenleri olan advice lere deyerini deyisen adi kimi verir  ve kod anlasiqligini artirir  mes:
-//    Pointcut :  @Pointcut ("execution(* com.project.MyController.EmployeeController(..))")
-//                 public void employeeControllerPointVariable(){
-//                      }
-//    istifadesi: @Before("employeeControllerPointVariable()")
-//               @After("employeeControllerPointVariable()")
-//
-//    Advice ler:  @After, @Before, @AfterReturning, @Around (hem evvelde hem sonda), @AfterThrowing, @OzAdvicemiz
-//------------------------------------------------------------------------------------------------------------
-//    @Around(value= "employeeControllerPointVariable()")
-//       public void aroundAdvice(ProceedingJoinPoint proceedingJoinPoint){
-//          System.out.println("Method baslamazdan evvel")
-//               proceedingJoinPoint.proceed();
-//          System.out.println("Method baslamazdan sonra")
-//       }
-//
-//     @Pointcut ("execution(* com.project.MyController.EmployeeController(..))")
-//               public void employeeControllerPointVariable(){
-//                    }
-//------------------------------------------------------------------------------------------------------------
-//    @OzAdvicemiz de around un icine oz advicemizin path ini veririk
 //
 //-------------------------------------------------------------------------------------------------------------------------
 //
@@ -191,37 +151,6 @@ public class spring_giris {
 //
 //   WildFly  JBoss firmasina mexsus, Apache Tomcat kimi bir application serverdir,
 //---------------------------------------------------------------------------------------------------------------------------------
-//   Log lama proyektimizin calisma zamaninda  analiz ede bilmek, xetalari gormek, performansi deyerlendirmek, ve lazim olan melumatlari bir file ve ya db ye yazmagi temin edir
-//
-//   Spring default olaraq logback framework u istifade edir mehsur log framework leri log4j log4j2 slf4j ve. s
-//
-//   log4j ucun pom.xml e lazimli log4j jar larini yazmaliyiq. ve ayrica log4j.xml de mutleq sekilde src/main/resources altinda acmaliyiq. cunki log4j jari bu pathi axtarir
-//
-//    log4j.xml in icinde butun ayarlar <Configuration></Configuration> teg in icinde edilir.
-//    <Appenders></Appenders> bunun icinde outputun console ve ya file ve ya db oldugunu qeyd edirik ve birden cox <Console> ve <PatternLayout> yaza bilerik
-//
-//    <Configuration status="debug" name="baeldung" packages="">
-//    <Appenders>
-//        <Console name="stdout" target="SYSTEM_OUT">
-//            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %p %m%n"/>
-//        </Console>
-//        <!-- Diğer appender'lar burada eklenebilir -->
-//    </Appenders>
-//    <Loggers>
-//        <Root level="error">
-//            <AppenderRef ref="STDOUT"/>
-//        </Root>
-//    </Loggers>
-//  </Configuration>
-//
-//  <PatternLayout> outputun gorunus ve hansi hisselerin cixmasini istediyimiz tag dir
-//    <Loggers></Loggers> bu tagin icinde istediyimiz <Logger></Logger> taglerini yazaraq log seviyelerine ve bolgelerine gore log yazmagimizi temin edir, loggers in icinde
-//    bir de  <Root></Root> logger de olur bu default logger sayilir logger teyin etmesek avtomatik bu isleyir ve butun paketler ucun kecerli sayilir
-//     <Root></Root> icindeki <AppenderRef> ile hansi <Console> dizayninin referansini teyin edeceyimizi gostere bilerik
-//
-//   log seviyeleri debug < info < warn < error < trace olaraq gedir mes eger warn teyin etsek warn ve ustu olan error ve trace isleyir daha zeif olan debug ve info islemir
-//   <RollingFile> file larimiza mueyyen limit verib boyuk log size lari zamani ardicil yeni fayllar yaradir ve hemcinin fayllarin tarixe gore adlandirilmasi ile
-//    axtarisi asanlasdiran bir Appender methodudur.
 //
 //   pom.xml de elave olunan dependency bize jar seklinde classlar interfaceler annotationlar verir. pluggin ise kodumuza mudaxile edir.
 //
@@ -322,103 +251,6 @@ public class spring_giris {
 //
 //   pageble bize gelen datalari sehifeler seklinde qaytarmaga imkan verir. bu zaman list<user> yox page<user> yaziriq,
 //
-//   @Transactional database ye geden butun deyisiklik query lerini bir entity manager ve bir sessionda ve eyni zamanda bir emeliyatin icinde edir
-//    ve deyek ki gonderen accauntun balansindan 50 azn cixdi ve qebul eden accauntun balansina 50 azn elave etdi ve deyek ki gonderen emeliyati yerine yetdiyi
-//   anda server problemi yarandi bu zaman transaction rollback kimi qeyde alinir ve butun emeliyatlar ehemiyyet kesb etdiyi ucun hamisi tamamlanmadigi
-//   ucun commit etmir ve sorgu baslamazdan evvel balanslar nece idise ele de qalir, Transaction bitimi yalniz iki netice ola biler ya commit ve ya rollback
-//
-//    Transaction PROPOGATION LEVEL @Transactional ile isarelenmis methodun basqa bir methoddan cagrildigi zaman transactionlarin nece davrandigini gosterir
-//    propogation leveller 7 yere ayrilir
-//    1: REQUIRED: default leveldir, bir nece emeliyat ugurlu biri ugursuz olsa hamisini rollback edir, yeni cagirib data istediyi hansisa methodda xeta olsa onu da oz xetasi kimi qebul edir
-//    2: REQUIRES_NEW: oz methodu icinde xeta yoxdursa basqa cagirdigi methoddaki xetalari nezere almir, onlarin neticesini bos verib oz icindeki yenilikleri db ye isleyir
-//    3: MANDATORY: eger mandatory methodu cagiran hansisa basqa method aktiv transaction baslatmayibsa callMethod  onunla islemekden imtina edir ve EXCEPTION atir
-//    4: SUPPORTS: eger ozunden evvel bir transaction varsa ona qatilir, yoxdursa transaction olmadan davam edir
-//    5: NOT_SUPPORTED: icinde cagirdigi methodlarin transactionu olsa da bu methodun icinde onlar non-transaction kimi davam eder
-//    6: NESTED: ic ice zencirvari cagrilan methodlarda ozunden sonrakilarda xeta olsa, b,c,d methodlari transactional ise a dan d ye qder hamisi rollback olur, yox eger
-//       b,c,d non transactional dirsa onlar da commit olur
-//    7: NEVER: eger cagirdigi methodun activ transactionu varsa exception atir, yoxdursa davam edir, meqsedi hec bir transactiona qatilmamaqdir
-//
-//   amma bir sert var ki @Transactional runtime exceptionlari catch edir burada diqqetli olmaq lazimdir, ya exceptionu runtime etmek lazimdir ya da
-//   @Transactional(rollbackFor = Exception.class)
-//
-//   Transaction  isolation level dord cur olur   mes: accauntId=15 balance = 100;
-//
-//   1: Uncommited: bu zaman transaction1 15 id li accauntu deyisib balansi 70 etse commit etmese bele eyni anda giren transaction2 commit olmamis datani hem 70 olaraq
-//   gore hem de 70 deyeri uzerinden update ede bilir bu en asagi isolation seviyesidir. demek olar istifade olunmur
-//   DirtyRead(comit olmamis data gorme), NONREPEATABLE(update, delete), Phantom(insert)
-//   READ aciq UPDATE lock
-//   transaction2 insert, update,  leri gorur
-//
-//   2: Commited: bu zaman transaction1 15 id li accauntu deyisib balansi 70 etse ve hele commit etmese eyni anda giren transaction2 commit olmamis datani hele de 100
-//    olaraq gorur amma update ede bilmir lock veziyetinde olur. ekser db lerin default isolation leveli commited dir
-//    NONREPEATABLE(update, delete), Phantom(insert) gorur
-//    READ aciq UPDATE lock
-//    transaction2 , commit olunmus  datani gorur
-//
-//   3:Repeatable Read: bu zaman transaction1 ile transaction2 eyni anda baslayib ve transaction1 update delete insert islerini gorub ve commit edib transactionu
-//   bitirib amma hele de transaction2 emeliyata basladigi zaman 15 id li accauntun  deyeri ne idise onu gorur hele de transaction1 in commit olmus deyisikliklerini
-//   gore bilmir. gormesi ucun yeni transaction baslatmalidir.
-//    Phantom(insert) gorur amma db ler bunu gostermir
-//   READ transactiona girende aldigi kimi qalir, UPDATE lock
-//
-//   4: Serializable: bu zaman transaction1 ve transaction2 eyni anda baslayibsa ve transaction1 15 id li accauntun  deyeri hetta select bele edibse transaction2
-//    15 id li accauntu gormek ucun gozlemeli olur deyisdirmesi ise umumiyetle elcatmazdir. transaction1 isini bitirib commit edenden sonra oxuya biler, gozleyir
-//    READ lock UPDATE lock
-//
-//    isolation guclu seviyeye qalxdiqca performance asagi dusur en suretsiz Serializable dir
-//
-//    cash leme yalniz primary key(id) ile cagrilan entity lericash a yazir
-//
-//   @ManyToMany ucun ucuncu table de customer a account set etmek ucun db ye accountu tapmaq ucun sorgu (account= accountRepository.findAccountById) atmadan
-//   sadece context den valid id referansin (account= accountRepository.GetReferenceById) getirib birlesdirmek olar. getId den basqa her sey null gorunur sadece
-//   olaraq context de bu id nin olub olmamasini yoxlayir heqiqeten valid dirse verir, query atmaqdan xilas edir
-//
-//   Transaction da ACID prinsipi var :
-//    A: atomicy, yeni bir transaction icinde butun emeliyatlar ya hamisi success olmalidir ya da bir denesi bele fail olsa hamisi fail edilir
-//    C: Consistency transaction sonucu mutleq database de oz eksini tapmalidir yeni bir accountun cixisi basqa accountun artisi olmalidir
-//    I: Isolation eyni anda isleyen transactionlar bir birinin deyisikliklerini gormeli deyil
-//    D: Durability yeni transaction sonrasi deyisiklikler itmeli deyil, database cokse bele emeliyatin neticeleri qorunmalidir
-//
-//    Entity obyektinin asagidaki veziyetleri ola biler
-//    1: Transient (Keçici) Durum: heleki id si yoxdur codda var amma entity context de yoxdur
-//         Person person = new Person();
-//         person.setName("John Doe");
-//
-//    2: Managed (Idare olunan) Durum:  id si var ve hal hazirda session dadir ve uzerinde is gedir
-//        Long id = (Long) session.save(person);
-//
-//    3: Detached (Ayrılmış) Durum:  id si var amma sessionile elaqesi kesilib db de movcuddur yeni session lazimdir
-//        session.close();
-//
-//    4: Removed (Silinmiş) Durum:  silinib id si var qalan her seyi silinib
-//        session.delete(person);
-//    @Builder ile obyekt yaradanda mutleq allArgdConstructor ve noArgsConstructor elave etmeliyik
-//    @Component ve ya onun alt repo, service, configuration, controller kimi annotationlari ile isarelenmemis classlarda diger hec bir annotation islemir
-//    @Component ile @Bean ferqi component custom classlarimiza qoyuruq ve spring onun bir obyektini yaradib referansini ioc containere elave edir,
-//    @Bean ise esasen methodlarda istifade olunur meselen configuration classimizda BCryptPasswordEncoder spring classini donduren ve bir referansini yaradib ioc
-//    containere atan bir method yazdiq, yeni component esasen oz classlarimiza, bean ise esasen methodlara aiddir
-//
-//           @Configuration
-//          public class SecurityConfig {
-//           @Bean
-//          public BCryptPasswordEncoder passwordEncoder() {
-//           return new BCryptPasswordEncoder();
-//         }
-//      }
-//
-//    CGLIB library si spring boot da istifade ede bileceyimiz bir ozellikdir, bize ozumuzun proxy lerimizi yaratmaga imkan verir, final methodu olan classlarin proxy sini
-//    yaratmir cunki hemin classi extend etmis olur, esas classin ozelliklerine deymeden elave funksionalliqlar elave etmeyimize imkan verir mes: log yazma, transaction,
-//    security, cache. jdk proxy den ferqli olaraq interface impliments etmeyen classlarin da proxsini yaradir
-//
-//    @Transactional olan yerde repo.save ehtiyac yoxdur ozu commit edir , @Transactional yalniz @Component yeni bean olan class larda public methodlarda isleyir
-//    ve hemin class dan kenarda cagrilmalidir
-//
-//    @Transactional ile mes:UserServiceImpl da bir method yazdigimiz zaman spring arxada hemin classin proxy kolgesini yaradir UserServiceImpl kimi UserService i
-//    impliments edir ve methoddaki butun emeliyatlari bir nov try-catch icinde edirve butun muraciet etdiyi yerlerden problem almadisa, emeliyyatlar ugurlu oldusa
-//    en sonda umumi commit edir, her bir emeliyyati bir bir commit etmir
-//
-//      @Transactional(readOnly = true) sadece db den melumatlari get edib getirir update etmir
-//
 //   db query atilan zaman entityManagerFactory nin icinde 10-15 obyekden her hansisa biri >1< query ni(user = userRepo.findById(2)) alir ve oz icindeki "L1" casha baxir
 //   eger varsa db ye getmir user i verir, eger ozunde yoxdursa entityManagerFactory nin ozunun "L2" cashi na baxir orda tapsa useri verir, tapmasa son care db ye gedir,
 //   deyek ki bundan evvel hansisa sorguda >8< ve ya >11< obyekti (user = userRepo.findById(2)) db den getirib entityManagerFactory nin "L2" casina atibsa ordan ala bilerdi
@@ -470,15 +302,6 @@ public class spring_giris {
 //   STATIC BINDING static methodlarin cagrilmasidir. hansinin cagrilmasi compile time da bilinir
 //   DYNAMIC BINDING non static methodlarin cagrilmasidir. hansinin cagrilmasi runtime da bilinir, override dynamic binding orneyidir
 //
-//   SEMAPHORA classi threadlerin idare olunmasi ucun istifade olunur, iki durumu olur , COUNTING ve BINARY. counting mueyyen sayda, binary bir  resursun olmasidir
-//   deadlock yeni iki threadin bir birini sonsuz loop a duserek gozlemesi probleminin hell olunmasi ucun istifade olunur.
-//
-//   DOUBLE CHECK LOCKING patterndir deyek ki singleton class yaradiriq ve obyekt null dursa thread yeni copya yaradir amma bir nece threadin girme aninda synchronized
-//   en ustde yazsaq bunlar gozleyecek ve yavaslayacaq, ona gore de eger obyekt null dursa yoxlayiriq null olsa bloka girecek ve burada synchronized teyin edirik ve yene
-//   null lugu yoxlayiriq. belece coxlu thread den yalniz biri obyekti yaradir
-//
-//   RACE CONDITION coxlu threadlerin bir resursu yenilemesi zamani bas verir, meselen 2 thread a bir counteri 500 defe artirmagi tapsirsaq counterin 750 teyin edilmesi
-//   durumudur gozlenen 1000 deyerinin altina dusulur. bunun qarsisini almaq ucun counteri synchronized etmek yeni counteri critic sectiona almaq lazimdir
 //
 //   Circuit Breaker Pattern: deyek ki 5 mikroservice miz var ve 4 cude problem cixdi bu zaman diger servicelere tesir edir, bunun qarsisini almaq ucun resilience4j kimi
 //   texnologiyalar isifade ede bilerik @Retry ile avtomatik tekrar istek atdirib problem davam ederse fallBack dondere bilerik, Circuit Breaker Pattern aciq, yarim aciq ve

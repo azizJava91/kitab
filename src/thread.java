@@ -51,6 +51,15 @@ import java.util.concurrent.Callable;
 //   Notify ve ya NotifyAll threadleri oyandirmaq ucun istifade olunur, sinxron islemezamani thread lerin kordinasiyasi ucun lazimdir
 //
 //
+//   SEMAPHORA classi threadlerin idare olunmasi ucun istifade olunur, iki durumu olur , COUNTING ve BINARY. counting mueyyen sayda, binary bir  resursun olmasidir
+//   deadlock yeni iki threadin bir birini sonsuz loop a duserek gozlemesi probleminin hell olunmasi ucun istifade olunur.
+//
+//  DOUBLE CHECK LOCKING patterndir deyek ki singleton class yaradiriq ve obyekt null dursa thread yeni copya yaradir amma bir nece threadin girme aninda synchronized
+//   en ustde yazsaq bunlar gozleyecek ve yavaslayacaq, ona gore de eger obyekt null dursa yoxlayiriq null olsa bloka girecek ve burada synchronized teyin edirik ve yene
+//   null lugu yoxlayiriq. belece coxlu thread den yalniz biri obyekti yaradir
+//
+//   RACE CONDITION coxlu threadlerin bir resursu yenilemesi zamani bas verir, meselen 2 thread a bir counteri 500 defe artirmagi tapsirsaq counterin 750 teyin edilmesi
+//   durumudur gozlenen 1000 deyerinin altina dusulur. bunun qarsisini almaq ucun counteri synchronized etmek yeni counteri critic sectiona almaq lazimdir
 //
 //
 //
