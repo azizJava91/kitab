@@ -23,7 +23,7 @@ public class jdbs {
 //    jdbc api emrleri driver managere gonderir ve driver manager database ile elaqe qurub isleyir ve datalari jdbc api ye geri verir
 //
 //    java da jdbc nin uc elementi istifade olunur
-//
+//------------------
 //    1: Connection
 //    session yaradir, sql sorgularini db ye gonderir ve geri donen datani resultsete veren korpudur
 //    connection u iki class ile yaratmaq olur 1: DriverManager  2: DataSource

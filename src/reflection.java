@@ -39,7 +39,7 @@ public class reflection {
 //   3: Class class = employee.getClass();                              referansla yaratmaq   try catch ehtiyac olmur
 //
 //
-//    java.lang.reflect paketinde  Method , Field , Constructor kimi onemli test classlar var
+//    java.lang.reflect paketinde  Method , Field , Constructor kimi onemli test classlar va
 //
 //
 //
