@@ -191,10 +191,10 @@ public class spring_giris {
 //        A a = new A(b);
 //   }
 //  }
-//       burada rekuriya dongusunun qarsisini almaq ve loopdan cixmaq ucun her hansi bir classin constructoruna 2Lazy annotation
+//       burada rekuriya dongusunun qarsisini almaq ve loopdan cixmaq ucun her hansi bir classin constructoruna @Lazy annotation
 //    ile gozleme ve null alma emri veririk ve lazim oldugu anda initialize edirik ve problemin qarsisini aliriq
 //------------------------------------------------------------------------------------------------------------------------------------------
-//   java da referanslarin yaddasda nece idare olunmasina gore ferqli referanslar var
+//   java da referanslarin yaddasda nece idare olunmasina gore ferqli referanslar var/**/
 //
 //   1: Strong referance: guclu referance dir GC terefinden silinmez
 //      User user = new User();  user Strong referance dir

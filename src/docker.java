@@ -6,7 +6,7 @@ public class docker {
 //
 //   CONTAINER bizim applicationumuzu hansisa bir virtual masinda, ve hansisa operation system de up etmek ve idare etmek ucundur
 //
-//   Docker bir container dir, docker olmayanda bir proyekti qaldirmaq ucun virtual masin yaradilirdi onun icine operation system yazilirdi, networkler congig olunurdu
+//   Docker bir container dir, docker olmayanda bir proyekti qaldirmaq ucun virtual masin yaradilirdi onun icine operation system yazilirdi, networkler config olunurdu
 //   menfi cehetleri configurasiya vaxt alir operation system cox yaddas hecmine malikdir, virtual masin cox cpu ram istifade edirdi,
 //
 //   docker de ise bos containerler var onlarin her birinin icinde db mizi, proyektimizi qaldira bilirik, deyek ki bize mysql lazimdi biz bunu docker olmadan endirsek
